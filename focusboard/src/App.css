@@ -1,0 +1,697 @@
+
+/* Main layout */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  margin-left: 250px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-right: 1px solid #e8ebf2;
+  padding: 30px 20px;
+}
+
+.sidebar-logo {
+  color: #635bdb;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 45px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: transparent;
+  color: #667085;
+  border-radius: 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.sidebar-nav button:hover,
+.sidebar-nav button.active {
+  background: #eeedff;
+  color: #635bdb;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 25px;
+  margin-bottom: 7px;
+}
+
+.header p,
+.welcome-section p,
+.section-heading p {
+  color: #858b9a;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-actions > button {
+  background: #ffffff;
+  color: #667085;
+  padding: 11px;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.add-task-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 18px;
+  border-radius: 9px;
+  background: #635bdb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.add-task-button:hover {
+  background: #5148c5;
+}
+
+/* Statistics cards */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 22px;
+  border: 1px solid #eceef4;
+  border-radius: 13px;
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #777f90;
+  font-size: 14px;
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eeedff;
+  color: #635bdb;
+}
+
+.stat-card h2 {
+  font-size: 29px;
+  margin: 15px 0 8px;
+}
+
+.stat-card p {
+  color: #9298a6;
+  font-size: 12px;
+}
+
+/* Focus notes */
+
+.focus-notes {
+  background: #635bdb;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+}
+
+.focus-notes-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.focus-notes-heading h2 {
+  font-size: 19px;
+}
+
+.focus-notes-heading div {
+  display: flex;
+  gap: 8px;
+}
+
+.focus-notes-heading button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.note-content {
+  margin: 22px 0;
+}
+
+.note-content h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.note-content p {
+  font-size: 14px;
+  color: #eeedff;
+  line-height: 1.6;
+}
+
+.note-indicators {
+  display: flex;
+  gap: 7px;
+}
+
+.note-indicators button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #aaa5f0;
+}
+
+.note-indicators button.selected {
+  background: #ffffff;
+  width: 22px;
+  border-radius: 10px;
+}
+
+/* Tasks section */
+
+.tasks-section {
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #eceef4;
+  border-radius: 14px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+/* Search */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e4e7ee;
+  border-radius: 9px;
+  padding: 0 14px;
+  color: #858b9a;
+  margin-bottom: 18px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 13px 0;
+  border: none;
+  background: transparent;
+}
+
+/* Filters */
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-tabs button {
+  padding: 9px 14px;
+  border-radius: 8px;
+  background: #f4f5f9;
+  color: #70788a;
+  font-size: 13px;
+}
+
+.filter-tabs button.active {
+  background: #635bdb;
+  color: #ffffff;
+}
+
+.filter-section select,
+.task-card-actions select {
+  border: 1px solid #e4e7ee;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  color: #555e70;
+  font-size: 13px;
+}
+
+/* Task list and cards */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 19px;
+  border: 1px solid #eceef4;
+  border-radius: 11px;
+}
+
+.task-card-content {
+  min-width: 0;
+}
+
+.task-card-content h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.task-card-content p {
+  color: #858b9a;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+
+.task-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  color: #858b9a;
+  font-size: 12px;
+}
+
+.priority {
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.priority.high {
+  background: #ffe9e9;
+  color: #d94b4b;
+}
+
+.priority.medium {
+  background: #fff3d9;
+  color: #b77b12;
+}
+
+.priority.low {
+  background: #e6f8ee;
+  color: #26945b;
+}
+
+.task-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-card-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  border-radius: 8px;
+  background: #f4f5f9;
+  color: #687184;
+}
+
+.task-card-actions button:hover {
+  background: #eeedff;
+  color: #635bdb;
+}
+
+.task-card-actions button:last-child:hover {
+  background: #ffe9e9;
+  color: #d94b4b;
+}
+
+/* Empty state */
+
+.empty-state {
+  text-align: center;
+  padding: 45px 15px;
+  color: #858b9a;
+}
+
+.empty-state h3 {
+  color: #303849;
+  margin-bottom: 8px;
+}
+
+/* Task form */
+
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(20, 25, 40, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.task-form {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.form-heading h2 {
+  font-size: 21px;
+}
+
+.form-heading button {
+  background: transparent;
+  color: #667085;
+}
+
+.task-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 15px 0 7px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e4ec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #303849;
+}
+
+.task-form textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.form-actions button {
+  padding: 11px 17px;
+  border-radius: 8px;
+  background: #f0f1f5;
+  color: #4d5668;
+  font-weight: 600;
+}
+
+.form-actions button:last-child {
+  background: #635bdb;
+  color: #ffffff;
+}
+
+/* Settings */
+
+.settings-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 13px;
+  line-height: 2;
+}
+
+.settings-section p {
+  color: #858b9a;
+  font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 17px 20px;
+    border-right: none;
+    border-bottom: 1px solid #e8ebf2;
+  }
+
+  .app-container {
+    display: block;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .sidebar-nav button {
+    padding: 9px;
+    font-size: 12px;
+  }
+
+  .sidebar-nav button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+
+  .header {
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .profile span {
+    display: none;
+  }
+
+  .welcome-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .welcome-section h2 {
+    font-size: 20px;
+  }
+
+  .add-task-button {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .stat-card-top {
+    font-size: 12px;
+  }
+
+  .stat-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tasks-section {
+    padding: 16px;
+  }
+
+  .filter-section {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+
+  .task-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .task-card-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .task-card-actions select {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .task-card-actions button {
+    padding: 10px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 390px) {
+  .main-content {
+    padding: 16px 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .sidebar-nav button {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .focus-notes {
+    padding: 18px;
+  }
+
+  .task-form {
+    padding: 18px;
+  }
+}
